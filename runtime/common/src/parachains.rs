@@ -3629,10 +3629,7 @@ mod tests {
 			let mut candidates = vec![candidate];
 			candidates.iter_mut().for_each(make_attestations);
 
-			assert_ok!(Parachains::dispatch(
-				set_heads(candidates),
-				Origin::NONE,
-			));
+			assert_ok!(Call::from(set_heads(candidates)).dispatch(Origin::none()));
 
 			assert_eq!(
 				vec![DownwardMessage::Opaque(vec![3])],

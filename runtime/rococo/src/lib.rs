@@ -879,3 +879,15 @@ sp_api::impl_runtime_apis! {
 		}
 	}
 }
+
+#[test]
+fn init() {
+	let encoded = Call::Hrmp(parachains_hrmp::Call::hrmp_init_open_channel(5000.into(), 64, 1024)).encode();
+	println!("{:?}", encoded);
+}
+
+#[test]
+fn accept() {
+	let encoded = Call::Hrmp(parachains_hrmp::Call::hrmp_accept_open_channel(666.into())).encode();
+	println!("{:?}", encoded);
+}

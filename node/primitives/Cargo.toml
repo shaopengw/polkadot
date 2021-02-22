@@ -16,4 +16,4 @@ sp-application-crypto = { git = "https://github.com/paritytech/substrate", branc
 sp-consensus-vrf = { git = "https://github.com/paritytech/substrate", branch = "master" }
 sp-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "master" }
 schnorrkel = "0.9.1"
-thiserror = "1.0.22"
+thiserror = "1.0.24"
